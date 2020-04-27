@@ -3,18 +3,22 @@ This program would search a number out of a list using a technique called Linear
 
 
 
-def search(a, n, x): 
-  
-    for i in range (0, n): 
-        if (a[i] == x): 
-            return i; 
-    return -1; 
-  
-a = [ 2, 3, 4, 10, 40 ]; 
-x = 10; 
-n = len(a); 
-result = search(a, n, x) 
-if(result == -1): 
-    print("Element is not present in array") 
-else: 
-    print("Element is present at index", result); 
+def linear_search(n,x):
+    elements=[]
+    for i in range(n):
+        elements.append(i)
+        flag=0
+        count=0
+    for i in elements:
+        count+=1
+        if(elements[i]==x):
+            print("The element found at pos:",i)
+            flag=1
+            break;
+    if(flag==0):
+        print("Element not found")
+        
+    print("The no of iteration to find the number is:",count)
+            
+        
+linear_search(12,4)        
